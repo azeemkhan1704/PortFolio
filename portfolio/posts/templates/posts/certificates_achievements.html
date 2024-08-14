@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static "posts/certificates_achievements.css" %}">
+{% endblock css %}
+
+{% block title %}
+Education
+{% endblock title %}
+{% block body %}
+<div class="container">
+    <h1>Certificates</h1>
+
+    <!-- Certificates Section -->
+    <div class="section">
+        <h2>Certificates</h2>
+        <ul class="certificates">
+            <li>
+                <div class="cert-title">Python for Data Science, AI & Development Issued By IBM(Coursera)</div>
+                <div class="cert-date">Oct 2023</div>
+                <div class="cert-details">Proficient in NumPy, Pandas, Matplotlib, and web scraping with Beautiful Soup.</div>
+            </li>
+            <li>
+                <div class="cert-title">Data Analysis with Python Issued by IBM(Coursera)</div>
+                <div class="cert-date">Oct 2023</div>
+                <div class="cert-details">Skilled in data manipulation, visualization, and applied statistics and machine learning Algorithms.
+                </div>
+            </li>
+            <li>
+                <div class="cert-title">Machine Learning with Python Issued by IBM(Coursera)</div>
+                <div class="cert-date">Jan 2024</div>
+                <div class="cert-details">Implemented a range of machine learning algorithms including Logistic Regression, Decision Trees,
+                    Random Forests,SVMs ,and KNN.
+                    Enhanced models using ensemble methods, cross-validation, and hyperparameter tuning.
+                    </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Achievements Section -->
+</div>
+{% endblock body %}

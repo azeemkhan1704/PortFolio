@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <style>
+        .topnav {
+            background-color: #333;
+            overflow: hidden;
+            width: 100%; /* Make the width of the navigation bar flexible */
+        }
+        
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 0; /* Remove fixed padding to make the width flexible */
+            width: 16.66%; /* Adjust this percentage based on the number of links */
+            box-sizing: border-box; /* Ensure padding doesn't affect width */
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .topnav a.active:hover {
+            background-color: #f4f4f4;
+            color: green;
+        }
+        
+        .topnav a.active {
+            background-color: #0ef043;
+            color: black;
+        }        
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+        footer {
+        background-color: #014e5a;
+        padding: 5px 0;
+        text-align: center;
+        border-top: 1px solid #e7e7e7;
+        margin-top: 40px;
+        }
+
+
+        footer .footer-section h4 {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        footer .footer-section p,
+        footer .footer-section a {
+            color: #aed0ee;
+            text-decoration: none;
+        }
+
+        footer .footer-section p:hover {
+            color: #e0e7ee;
+        }
+
+        footer .social-icons a {
+            margin: 0 5px;
+            color: #507ca2;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        footer .social-icons a:hover {
+            color: #c8d6e6;
+        }
+    </style>
+    {% block css %}{% endblock css %}
+</head>
+<body>
+    <div>
+        {% comment %} <img src={% static "AzeemP.png" %} alt="Azeem Khan" class="center"> {% endcomment %}
+    </div>
+    <div class="topnav">
+        <a class="active" href="{% url 'home' %}">Home</a>
+        <a href="{% url 'education' %}">Education</a>
+        <a href="{% url 'skills' %}">Skills</a>
+        <a href="{% url 'projects' %}">Project</a>
+        <a href="{% url 'certificates_achievements' %}">Certificates</a>
+        <a href="{% url 'contact' %}">Contact</a>
+
+        
+      
+      </div>
+    {% block body %}
+
+    {% endblock body %}
+    <footer>
+    
+        <span class="footer-section">
+            <h3>Contact Information</h3>
+            <p>Email: azeemkhanlog10@gmail.com</p>
+            <p>Phone: +91 9833049788</p>
+        </span>
+        <span class="footer-section">
+            <h3>Follow Me</h3>
+            <div class="social-icons">
+                <p><img width="15" src="{% static "posts/linkdin.jpg" %}"><a href="https://www.linkedin.com/in/mohammad-azeem-khan-88a326229/" title="LinkedIn"> LinkedIn</a>
+                <img width="15" src="{% static "posts/Github.jpeg" %}"><a href="https://github.com/azeemkhan1704" title="Github Profile">GitHub</a>
+            </div>
+        </span>
+        
+    
+    </footer>
+    <script>
+        // Get all the nav links
+        const navLinks = document.querySelectorAll('.topnav .nav-link');
+
+        // Add a click event listener to each link
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                // Remove the active class from all links
+                navLinks.forEach(link => link.classList.remove('active'));
+                
+                // Add the active class to the clicked link
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static "posts/home.css" %}">
+{% endblock css %}
+{% block title %}
+Home
+{% endblock title %}
+{% block body %}
+
+<div class="container">
+    <p  >
+        <img src="{% static 'posts/azeem.png' %}" alt="Azeem Khan" class="float-left">
+        <b class="name">Mohammad Azeem Khan</b>
+        
+        <a href="{% url 'resume' %}" class="resume-button" >View Resume</a>
+        
+    <br><br>
+    Hi, I'm Mohammad Azeem Khan, a 4th-year B.Tech student in Computer Science Engineering at IIIT Nagpur. I have a solid foundation in Python, Data Analysis, Machine Learning, Deep Learning, and I've worked on several interesting projects. Some of these include an Eye Disease Classifier, a Sentiment Analysis tool, and a Data Visualization and Analysis platform. I also developed a Scholarship Management System using the MERN stack, where I managed the backend and database with Node.js, Express, and MongoDB.
+
+    In addition to Python and machine learning, I'm also familiar with C/C++ and have a basic understanding of Java. I’ve earned certifications from IBM in Data Science and Machine Learning, which helped me refine my skills in data analysis and model optimization. Currently, I'm focused on developing my skills further and learning more about AI, ML, and data science. I'm passionate about using technology to solve real-world problems and I'm alwa
+    ys eager to enhance my technical abilities.
+</div>
+
+<h1 class="work">Work Samples</h1>
+<a href="https://huggingface.co/spaces/azeemkhan417/data_analyzer"><h2>Data Analytics Portal</h2></a>
+<div style="display: grid; place-items: center; height: 100vh;">
+    <iframe src="https://azeemkhan417-data-analyzer.hf.space" width="80%" height="550" style="border:1px solid black;"></iframe>
+</div>
+
+
+<a href="https://huggingface.co/spaces/azeemkhan417/Sentimental_AI/"><h2>Sentiment Analysis</h2></a>
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <iframe src="https://azeemkhan417-Sentimental-AI.hf.space" width="80%" height="550" style="border:1px solid black;"></iframe>
+</div>
+
+<!-- Add more iframes as needed -->
+</div>
+
+{% endblock body %}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static "posts/education.css" %}">
+{% endblock css %}
+
+{% block title %}
+Education
+{% endblock title %}
+{% block body %}
+<div class="container">
+    <h1>Education</h1>
+    
+    <div class="education">
+        <div class="education-item">
+            <h2>Indian Institute of Information Technology, Nagpur</h2>
+            <h3>Bachelor of Technology in Computer Science and Engineering</h3>
+            <p>CGPA: 7.1</p>
+            <span>Relevant Coursework:</span>
+            <ul>
+                <li>Machine Learning</li>
+                <li>DSA</li>
+                <li>Computer Networks</li>
+                <li>OOPs Concepts</li>
+                <li>Database Management System</li>
+                <li>Operating System</li>
+                <li>Applied Linear Algebra</li>
+                <li>Discrete Mathematics & Group Theory</li>
+                <li>Software Engineering and Architecture</li>
+            </ul>
+            
+        </div>
+
+        <div class="education-item">
+            <h2>Al-Irfan Senior Secondary School</h2>
+            <h3>12th Grade - PCM (Physics, Chemistry, Mathematics)</h3>
+            <p>Percentage: 83.2%</p>
+        </div>
+    </div>
+</div>
+{% endblock body %}

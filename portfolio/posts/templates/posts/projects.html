@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static "posts/projects.css" %}">
+{% endblock css %}
+
+{% block title %}
+Education
+{% endblock title %}
+{% block body %}
+<div class="container">
+    <h1>Projects</h1>
+    <div class="projects">
+
+        <div class="project-item" onclick="toggleDetails(this)">
+            <div class="project-title">Project 1: Eye Disease Classification</div>
+            <div class="project-summary">A deep learning model for diagnosing eye diseases with high accuracy.</div>
+            <div class="project-details">
+                <p>
+                    <a href="https://github.com/azeemkhan1704/Eye_Disease_Classification" target="_blank">Code</a>
+                    <a href="https://eyediseaseclassifier.streamlit.app/" target="_blank">App</a>    
+                    <ul>
+                        <li>Developed and compared models using VGG-16, VGG-19, DenseNet, MobileNet, ResNet, and their hybrid.</li>
+                        <li>Achieved 96% accuracy with the hybrid model for diagnosing eye diseases.</li>
+                        <li>Preprocessed images using OpenCV and Keras utilities.</li>
+                        <li>Enhanced model generalization with extensive data augmentation.</li>
+                        <li>Optimized model using GroupKFold cross-validation.</li>
+                        <li>Deployed the model on Streamlit for accessible disease detection.</li>
+                    </ul>
+                </p>
+            </div>
+            <span class="toggle-btn">View Details</span>
+        </div>
+
+        <div class="project-item" onclick="toggleDetails(this)">
+            <div class="project-title">Project 2: Sentiment Analysis</div>
+            <div class="project-summary">A sentiment analysis app built using NLP techniques and Streamlit.</div>
+            <div class="project-details">
+                <p>
+                    <a href="https://huggingface.co/spaces/azeemkhan417/Sentimental_AI/tree/main" target="_blank">Code</a>
+                    <a href="https://huggingface.co/spaces/azeemkhan417/Sentimental_AI" target="_blank">App</a>
+                    <ul>
+                        <li>Built a sentiment analysis app using Streamlit, Python, and NLP.</li>
+                        <li>Implemented text preprocessing including tag removal, normalization, and contraction expansion.</li>
+                        <li>Used pre-trained Word2Vec for text vectorization.</li>
+                        <li>Developed a model to classify sentiment as positive or negative.</li>
+                        <li>Deployed with a user-friendly interface for sentiment classification.</li>
+                    </ul>
+                </p>
+            </div>
+            <span class="toggle-btn">View Details</span>
+        </div>
+
+        <div class="project-item" onclick="toggleDetails(this)">
+            <div class="project-title">Project 3: Data Analytics Portal</div>
+            <div class="project-summary">An interactive portal for comprehensive data analysis and visualization.</div>
+            <div class="project-details">
+                <p>
+                    <a href="https://huggingface.co/spaces/azeemkhan417/data_analyzer/tree/main" target="_blank">Code</a>
+                    <a href="https://huggingface.co/spaces/azeemkhan417/data_analyzer" target="_blank">App</a>
+                    <ul>
+                        <li>Developed a user-friendly portal that allows users to upload files for interactive data analysis.</li>
+                        <li>Implemented features for EDA, value counts, group-by operations, and dynamic visualizations.</li>
+                        <li>Enhanced data exploration with powerful tools for detailed analysis.</li>
+                    </ul>
+                </p>
+            </div>
+            <span class="toggle-btn">View Details</span>
+        </div>
+
+        <div class="project-item" onclick="toggleDetails(this)">
+            <div class="project-title">Project 4: Academic Risk Prediction</div>
+            <div class="project-summary">A predictive model for identifying academic risks using ensemble techniques.</div>
+            <div class="project-details">
+                <p>
+                    {% comment %} <a href="https://huggingface.co/spaces/azeemkhan417/data_analyzer/tree/main" target="_blank">Code</a> {% endcomment %}
+                    {% comment %} <a href="https://huggingface.co/spaces/azeemkhan417/data_analyzer" target="_blank">App</a> {% endcomment %}
+                    <ul>
+                        <li>Developed a predictive model for academic risk using Kaggle’s synthetic dataset.</li>
+                        <li>Employed ensemble techniques with LightGBM and CatBoost for high accuracy.</li>
+                        <li>Conducted extensive exploratory data analysis (EDA) and visualization to uncover key patterns.</li>
+                        <li>Guided feature engineering based on insights from EDA.</li>
+                        <li>Utilized Stratified K-Folds Cross-Validation to enhance model robustness.</li>
+                    </ul>
+                </p>
+            </div>
+            <span class="toggle-btn">View Details</span>
+        </div>
+
+        <div class="project-item" onclick="toggleDetails(this)">
+            <div class="project-title">Project 5: Scholarship Management System</div>
+            <div class="project-summary">A full-stack web application for managing scholarship applications.</div>
+            <div class="project-details">
+                <p>
+                    <ul>
+                        <li>Developed a Scholarship Management System using Node.js, Express, MongoDB, and React.</li>
+                        <li>Implemented authentication, RESTful API endpoints, and user-friendly interfaces.</li>
+                        <li>Enhanced system with application history tracking, improving administrative efficiency by 20%.</li>
+                        <li>Modified backend routes and database schema for new features and admin insights.</li>
+                        <li>Integrated frontend to display user-specific application records for easy management.</li>
+                    </ul>
+                </p>
+            </div>
+            <span class="toggle-btn">View Details</span>
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+    function toggleDetails(element) {
+        element.classList.toggle('open');
+    }
+</script>
+{% endblock body %}
